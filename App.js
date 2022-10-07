@@ -9,7 +9,39 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
+
+
+
+const App = () => (
+  <View style={styles.container}>
+    <ImageBackground source={require('C:/Users/Tyler/Desktop/React/first_project/background.png')} resizeMode="cover" style={styles.image}>
+      <Text style={styles.text}>Book Now</Text>
+    </ImageBackground>
+  </View>
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  text: {
+    color: "white",
+    fontSize: 34,
+    lineHeight: 50,
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "#000000c0",
+  }
+});
+
+export default App;
+
+/**import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -28,8 +60,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-/* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
- * LTI update could not be added via codemod */
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -116,4 +146,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default App; */
