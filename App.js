@@ -1,25 +1,38 @@
 
 /** npx react-native run-android */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
-
+const AppButton = ({ onPress, title }) => (
+  <TouchableOpacity 
+    onPress={onPress}
+    style={styles.appButtonContainer}
+    activeOpacity={0.75}
+  >
+  <Text style={styles.appButtonText}>{title}</Text>
+  </TouchableOpacity>
+);
 
 const App = () => (
   <View style={styles.container}>
     <ImageBackground source={require('C:/Users/Tyler/Desktop/React/first_project/background.png')} resizeMode="cover" style={styles.image}>
-      <Text style={styles.text}>Book Now</Text>
+
+    <AppButton title="About Us"/>
+    <Text> </Text>
+    <AppButton title="Menu"/>
+    <Text> </Text>
+    <AppButton title="Book Now"/>
+    <Text> </Text>
+    <Text> </Text>
+    <Text> </Text>
+    <Text> </Text>
+      
     </ImageBackground>
   </View>
+  
 );
+
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +40,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: "flex-end"
   },
   text: {
     color: "white",
@@ -36,8 +49,22 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     backgroundColor: "#000000c0",
+  },
+  appButtonContainer: {
+    elevation: 8,
+    backgroundColor: "rgba(52, 52, 52, 0.75)",
+    paddingVertical: 5,
+    paddingHorizontal: 12
+  },
+  appButtonText: {
+    fontSize: 28,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center"
   }
 });
+
+
 
 export default App;
 
