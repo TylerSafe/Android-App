@@ -46,7 +46,7 @@ const MyStack = () => {
         <Stack.Screen 
           name="About Us" 
           component={AboutUs} 
-          options={{ title: '', headerTintColor: 'white'}}
+          options={{ title: 'About Us', headerTintColor: 'white'}}
 
         />
       </Stack.Navigator>
@@ -124,44 +124,40 @@ const AboutUs = ({ navigation, route }) => {
         style={styles.image}>
 
         <ScrollView style={styles.aboutUsScroll}>
-          <Text style={styles.aboutUsText}></Text>
-          <Text style={styles.aboutUsText}> 
+          <Text style={styles.aboutUsText}>
+            {"\n"}
+            Opening Hours{"\n"}{"\n"}
+            Monday: 10am - 9pm{"\n"}
+            Tuesday: 10am - 9pm{"\n"}
+            Wednesday: 10am - 9pm{"\n"}
+            Thursday: 10am - 9pm{"\n"}
+            Friday: 10am - 9pm{"\n"}
+            Saturday: 10am - 9pm{"\n"}
+            Sunday: 10am - 9pm{"\n"}{"\n"}
+
             Since our modest beginnings in 2005 with a little space in Toronto’s stylish Yorkville locale, 
             ‘Organization Name’ ‘s development has been enlivened with the energy to cook and serve solid, 
-            Indian-roused takeout food.
-          </Text>
-          <Text style={styles.aboutUsText}></Text>
-          <Text style={styles.aboutUsText}> 
+            Indian-roused takeout food.{"\n"}{"\n"}
+
             In contrast to other Indian eateries, ‘Organization Name’ was made with the explicit expectation 
-            to appear as something else.
-          </Text>
-          <Text style={styles.aboutUsText}></Text>
-          <Text style={styles.aboutUsText}>          
+            to appear as something else.{"\n"}{"\n"}
+     
             We realize numerous individuals love Indian sustenance, yet a large number of them loathe or are 
             unconscious of the regularly unfortunate fixings that make run-of-the-mill Indian nourishment taste 
-            so great.
+            so great.{"\n"}{"\n"}
+
+            Our menu highlights things that utilization the sound and fragrant flavors, however, forgets the 
+            stuffing ghee, spread, oil, and overwhelming cream.{"\n"}{"\n"}
+
+            ‘Organization Name’ has developed to incorporate four superb takeout areas in Toronto with additional 
+            to come sooner rather than later. Our group takes pride in the way that we can furnish our new and 
+            faithful clients with extraordinary tasting Indian-roused nourishment that is not normal for that at 
+            some other Indian eatery you visit.{"\n"}{"\n"}
+
+            We perceive that a few people are as yet searching for the run-of-the-mill Indian nourishment, and that 
+            is fine with us. Our disclaimer is that on the off chance that you’re anticipating overwhelming, slick, 
+            undesirable Indian nourishment, ‘Organization Name’ isn’t the place for you.{"\n"}
           </Text>
-          <Text style={styles.aboutUsText}></Text>
-          <Text style={styles.aboutUsText}> 
-          Our menu highlights things that utilization the sound and fragrant flavors, however, forgets the 
-          stuffing ghee, spread, oil, and overwhelming cream.
-          </Text>
-          <Text style={styles.aboutUsText}></Text>
-          <Text style={styles.aboutUsText}> 
-          ‘Organization Name’ has developed to incorporate four superb takeout areas in Toronto with additional 
-          to come sooner rather than later. Our group takes pride in the way that we can furnish our new and 
-          faithful clients with extraordinary tasting Indian-roused nourishment that is not normal for that at 
-          some other Indian eatery you visit.
-          </Text>
-          <Text style={styles.aboutUsText}></Text>
-          <Text style={styles.aboutUsText}> 
-          We perceive that a few people are as yet searching for the run-of-the-mill Indian nourishment, and that 
-          is fine with us. Our disclaimer is that on the off chance that you’re anticipating overwhelming, slick, 
-          undesirable Indian nourishment, ‘Organization Name’ isn’t the place for you.
-          </Text>
-          <Text style={styles.aboutUsText}></Text>
-          <Text></Text>
-          <Text></Text>
         </ScrollView>
       </ImageBackground>
     </View>
@@ -215,7 +211,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     color: "white",
     backgroundColor: "#000000c0",
-    fontSize: 18
+    fontSize: 18,
+    borderRadius: 30
   },
   aboutUsScroll: {
     marginTop: 70,
